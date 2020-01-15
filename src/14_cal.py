@@ -22,3 +22,37 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+# variables
+date = datetime.now()
+# print(date)
+yr = int(date.year)
+mnth = int(date.month)
+#print(yr, mnth)
+# print(sys.argv)
+# print(len(sys.argv))
+
+if len(sys.argv) == 1:
+    def make_cal(yr, mnth):
+        print(calendar.month(yr, mnth))
+    make_cal(yr, mnth)
+if len(sys.argv) == 2:
+    if len(sys.argv[1]) == 1 or len(sys.argv[1]) == 2:
+        mth = int(sys.argv[1])
+        print(calendar.month(yr, mth))
+    elif len(sys.argv[1]) == 4:
+        yar = int(sys.argv[1])
+        print(calendar.month(yar, mnth))
+if len(sys.argv) == 3:
+    if len(sys.argv[1]) == 1 or len(sys.argv[1]) == 2:
+        mth = int(sys.argv[1])
+        yar = int(sys.argv[2])
+        print(calendar.month(yar, mth))
+    elif len(sys.argv[1]) == 4:
+        yar = int(sys.argv[1])
+        mth = int(sys.argv[2])
+        print(calendar.month(yar, mth))
+else:
+    print("")
+    print(" there were just too many entries or format didn't follow the following")
+    print(' file month [year]')
+    print('')
