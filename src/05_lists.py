@@ -38,3 +38,30 @@ print(len(x))
 
 for thing in x:
     print(int(thing)*1000)
+
+
+x = [4, 3, 45, 2, 1]
+total = 0
+for number in x:
+    print(number, total)
+    total += number
+
+print("total", total)
+
+print("sum fn", sum(x))
+
+
+theList = [4, 3, 45, 2, 1]
+
+
+def check(list, arg):
+    total = list.count(arg)
+    if total > 0:
+        print('true')
+        return True
+    else:
+        print('false')
+        return False
+
+
+check(theList, 14)

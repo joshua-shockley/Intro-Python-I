@@ -37,11 +37,20 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 def print_tuple(f):
     print(f)
 # YOUR CODE HERE
+    for value in f:
+        print(value)
 
 
 t = (1, 2, 5, 7, 99)
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
 
 # Declare a tuple of 1 element then print it
-u = (1)  # What needs to be added to make this work?
+u = (1,)  # What needs to be added to make this work?  had to add the comma; tuples need a comma if only one item in the tuple
 print_tuple(u)
+# no way to actually adjust or modify a tuple.. Immutable list basically. you can however make a new one or replace entire tuple with same name.
+u = (33, 1, 0)
+print_tuple(u)
+
+print(u[1])
+for index in u:
+    print("in for each loop", index)

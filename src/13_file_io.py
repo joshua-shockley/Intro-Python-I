@@ -10,7 +10,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # YOUR CODE HERE
 
-with open('src/foo.txt', 'r') as f:
+with open('foo.txt', 'r') as f:
     for line in f:
         #f_contents = f.readline()
         print(line, end='\n')
@@ -22,14 +22,14 @@ with open('src/foo.txt', 'r') as f:
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-with open('src/bar.txt', 'w') as bar:
+with open('bar.txt', 'w') as bar:
     bar.write('\n')
     bar.write("this is line one \n")
     bar.write("this is line two \n")
     bar.write("this is the third line \n")
     bar.close()
 
-with open('src/bar.txt', 'r') as bar:
+with open('bar.txt', 'r') as bar:
     read_it = bar.read()
     print(read_it)
     bar.close()

@@ -17,3 +17,8 @@ print("x is %2d, y is %1.5f, z is %s" % (x, y, z))
 print('x is {}, y is {}, z is {}'.format(x, y, z))
 # Finally, print the same thing using an f-string
 print(f"x is {x}, y is {y}, z is {z}")
+
+
+def concat_name(first_name, last_name):
+    together = "{}, {}".format(last_name, first_name)
+    return together
