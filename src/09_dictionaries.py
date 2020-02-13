@@ -44,12 +44,16 @@ waypoints.extend([{"lat": 40, "lon": -110, "name": "yet another place"}])
 # Modify the dictionary with name "a place" such that its longitude
 # value is -130 and change its name to "not a real place"
 # YOUR CODE HERE
-for points in waypoints:
-    print(points)
+# for points in waypoints:
+#     print(points)
 
-#waypoints[0]= {"lon": -130, "name": "not a real place"}
-waypoints[0].update({"lon": -130, "name": "not a real place"})
+# waypoints[0].update({"lon": -130, "name": "not a real place"})
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
-for points in waypoints:
-    print(points)
+for points in waypoints:  # this way is wrong way to get what i wanted from instructions
+    print("values: ", points.values())
+    print("keys: ", points.keys())
+
+for points in waypoints:  # above is a list of dictionaries so first for loop throught the list to enter the dict and then use the .items() to pull out k&v from the dict
+    for k, v in points.items():  # can't use .items() on a list so it goes here once into the list and accessing the dict
+        print("the k&v:", k, v)

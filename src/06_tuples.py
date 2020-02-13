@@ -54,3 +54,25 @@ print_tuple(u)
 print(u[1])
 for index in u:
     print("in for each loop", index)
+
+# can't really manipulate a tuple but can take it's values and append them into a list
+
+
+def manipulate_tuple(tuple):
+    list = []
+    # for index in tuple:
+    #     list.append(index*3)
+    #     # print(list)
+    list = [index*3 for index in tuple]
+    # print(tuple(list))
+    return list
+
+
+print(manipulate_tuple(u))
+
+stuff = ['stuff', 1, "helo"]
+
+print(tuple(stuff))
+
+tup_stuff = tuple(stuff)
+print("tup_stuff:", tup_stuff)

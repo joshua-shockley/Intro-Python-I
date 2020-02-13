@@ -33,3 +33,18 @@ with open('bar.txt', 'r') as bar:
     read_it = bar.read()
     print(read_it)
     bar.close()
+
+
+with open('snarf.txt', 'w') as snarf:
+    snarf.write('\n')
+    snarf.write('this is one line \n')
+    snarf.write('this is another line to look at\n')
+    snarf.write('you might like where this is going.... maybe\n')
+    snarf.write('really, Josh... again?\n')
+    snarf.write('alright, that is enough already!')
+    snarf.close()
+
+with open('snarf.txt', 'r') as snarf:
+    read_it = snarf.read()
+    print("from snarf:", read_it)
+    snarf.close()
