@@ -32,8 +32,8 @@ print(a[:-1])
 
 # For string s...
 
-s = "Hello,  world!"
+s = "Hello, world!"
 
 # Output just the 8th-12th characters: "world"
 
-print(s[8:13])
+print(s[7:12])
